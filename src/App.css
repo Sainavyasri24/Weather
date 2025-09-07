@@ -1,38 +1,218 @@
-.App {
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #4CAF50, #2196F3);
+}
+
+.container {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.12);
+  width: 400px;
+}
+
+input[type="text"] {
+  padding: 15px;
+  margin: 15px 0;
+  width: 70%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border-color: #2196F3;
+}
+
+button {
+  padding: 15px 25px;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1565C0;
+}
+
+.weather-info {
+  margin-top: 30px;
+}
+
+.weather-info h2 {
+  margin: 0;
+  font-size: 32px;
+  color: #222;
+}
+
+.weather-info p {
+  margin: 6px 0;
+  font-size: 20px;
+  color: #555;
+}
+
+.error {
+  color: red;
+  margin-top: 15px;
+}
+/* Container styling */
+.container {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(200, 200, 200, 0.3);
+}
+
+/* Header */
+header h1 {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Search box */
+.search-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-box input[type="text"] {
+  width: 70%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px 0 0 20px;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-box button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ffc95f;
+  color: #333;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 0 20px 20px 0;
+  transition: background-color 0.3s ease;
+}
+
+.search-box button:hover {
+  background-color: #e6b34e;
+}
+
+/* Weather current info */
+.weather-current {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.weather-current h2 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.weather-current .temp {
+  font-size: 72px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.weather-current .condition {
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+
+/* Additional details */
+.details {
+  display: flex;
+  justify-content: space-around;
+  max-width: 400px;
+  margin: 0 auto 20px auto;
+  font-size: 14px;
+}
+
+.details div {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Hourly forecast scroll container */
+.hourly-forecast {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  overflow-x: auto;
+  gap: 12px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.hourly-forecast div {
+  flex-shrink: 0;
+  background: #fdf6db;
+  border-radius: 10px;
+  padding: 10px;
+  min-width: 70px;
+  text-align: center;
+  font-size: 14px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* 7-day forecast */
+.daily-forecast {
+  display: flex;
+  justify-content: space-between;
+}
+
+.daily-forecast div {
+  background: #f1f1f1;
+  border-radius: 10px;
+  padding: 10px 5px;
+  width: 13%;
+  text-align: center;
+  font-size: 14px;
+}
+
+.daily-forecast div p {
+  margin: 5px 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+  margin-top: 30px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .search-box input[type="text"] {
+    width: 60%;
+  }
+
+  .daily-forecast {
+    flex-wrap: wrap;
+  }
+
+  .daily-forecast div {
+    width: 30%;
+    margin-bottom: 10px;
   }
 }
+
