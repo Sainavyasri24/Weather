@@ -24,18 +24,21 @@ Node.js (which includes npm)
 
 # Installation
 1. Clone the repository
-'''
-git clone https://github.com/your-username/react-weather-app.git
- '''
-3. Navigate to the project directory
- '''
- cd react-weather-app
- '''
-5. Install NPM packages
-'''
- npm install
- '''
-7. Get an OpenWeatherMap API Key
+   ```
+   git clone https://github.com/your-username/react-weather-app.git
+   ```
+ 
+2. Navigate to the project directory
+
+  ```
+  cd react-weather-app
+ ```
+ 3. Intall NPM packages
+
+```
+  npm install
+ ```
+5. Get an OpenWeatherMap API Key
 This project requires an API key from OpenWeatherMap. If you don't have one, you can get a free key by signing up on their website:
 
 * Go to [OpenWeatherMap](https://openweathermap.org/) and create an account.
@@ -47,17 +50,17 @@ This project requires an API key from OpenWeatherMap. If you don't have one, you
 * Open the src/App.js file.
 
 * Find the following line:
-'''
+```
 JavaScript
 
-const apiKey = 'd4932ffb71dfe62976e4246f81a0c59c'; '''
+const apiKey = 'd4932ffb71dfe62976e4246f81a0c59c'; 
+```
 * Replace the placeholder key with your own OpenWeatherMap API key.
 
 6. Run the application
-,,,
-
-
-npm start'''
+```
+npm start
+```
 The app will open in your default browser at http://localhost:3000.
 
 ## Technologies Used
